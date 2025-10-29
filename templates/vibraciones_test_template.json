@@ -1,0 +1,298 @@
+{
+  "template_name": "Test de vibracion",
+  "template_code": "vibracion_test",
+  "base_model": "project.task",
+  "fields": [
+    {
+      "name": "x_assistance_code",
+      "field_type": "char",
+      "label": "Código asistencia",
+      "required": false
+    },
+    {
+      "name": "x_client",
+      "field_type": "char",
+      "label": "Cliente",
+      "required": true
+    },
+    {
+      "name": "x_model",
+      "field_type": "char",
+      "label": "Modelo",
+      "required": false
+    },
+    {
+      "name": "x_project",
+      "field_type": "char",
+      "label": "Proyecto",
+      "required": false
+    },
+    {
+      "name": "x_serial_number",
+      "field_type": "char",
+      "label": "SN",
+      "required": false
+    },
+    {
+      "name": "x_test_objective",
+      "field_type": "text",
+      "label": "Objetivo",
+      "readonly": true,
+      "default_value": "El objetivo de este test es la verificación y control del comportamiento de la máquina sin desequilibrio alguno y con desequilibrio comprobando la capacidad máxima de desequilibrio del eje principalmente, para estimar el estado de los amortiguadores."
+    },
+    {
+      "name": "x_test_procedure",
+      "field_type": "text",
+      "label": "Procedimiento",
+      "readonly": true,
+      "default_value": "Para poder realizar la verificación del control de las vibraciones utilizaremos diferentes pesos y revoluciones según la capacidad de la centrífuga. Se realiza una medida en continuo del nivel de vibraciones en los ejes X-Y de las centrífugas, a través del Transductor de velocidad que equipa el propio equipo. La medida de las vibraciones del sistema es expresada en mm/s."
+    },
+    {
+      "name": "x_test_method",
+      "field_type": "text",
+      "label": "Método",
+      "readonly": true,
+      "default_value": "Se colocarán los pesos en la pared del interior del cesto quedando estos totalmente fijados, y se acelerará la máquina a distintos regímenes de trabajo: 50%, 75%, 100% de la velocidad máxima. Los pesos a utilizar se determinarán por el departamento de Ingeniería de Riera Nadeu para cada equipo."
+    },
+    {
+      "name": "x_acceptance_criteria",
+      "field_type": "text",
+      "label": "Criterio de aceptación",
+      "readonly": true,
+      "default_value": "El equipo debe ser capaz de trabajar al 100% de su velocidad máxima sin desequilibrio. Los valores se registrarán para comparación con futuras revisiones."
+    },
+    {
+      "name": "x_instrument_brand_model",
+      "field_type": "char",
+      "label": "Instrumento Marca/Modelo",
+      "required": false
+    },
+    {
+      "name": "x_instrument_serial",
+      "field_type": "char",
+      "label": "Instrumento Nº de serie",
+      "required": false
+    },
+    {
+      "name": "x_calibration_certificate",
+      "field_type": "char",
+      "label": "Nº certificado de calibración",
+      "required": false
+    },
+    {
+      "name": "x_calibration_date",
+      "field_type": "date",
+      "label": "Fecha de calibración",
+      "required": false
+    },
+    {
+      "name": "x_limit_1",
+      "field_type": "float",
+      "label": "Límite 1 (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_limit_2",
+      "field_type": "float",
+      "label": "Límite 2 (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_max_speed",
+      "field_type": "integer",
+      "label": "Velocidad máxima (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_weights",
+      "field_type": "float",
+      "label": "Pesos para los ensayos (Kg)",
+      "required": false
+    },
+    {
+      "name": "x_test_1_imbalance",
+      "field_type": "float",
+      "label": "Ensayo 1 - Desequilibrio (Kg)",
+      "required": false
+    },
+    {
+      "name": "x_test_1_speed_50",
+      "field_type": "integer",
+      "label": "Ensayo 1 - 50% Vel (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_1_vibration_50",
+      "field_type": "float",
+      "label": "Ensayo 1 - 50% Vibración (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_test_1_speed_75",
+      "field_type": "integer",
+      "label": "Ensayo 1 - 75% Vel (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_1_vibration_75",
+      "field_type": "float",
+      "label": "Ensayo 1 - 75% Vibración (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_test_1_speed_100",
+      "field_type": "integer",
+      "label": "Ensayo 1 - 100% Vel (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_1_vibration_100",
+      "field_type": "float",
+      "label": "Ensayo 1 - 100% Vibración (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_test_1_comments",
+      "field_type": "text",
+      "label": "Ensayo 1 - Comentarios",
+      "required": false
+    },
+    {
+      "name": "x_test_2_imbalance",
+      "field_type": "float",
+      "label": "Ensayo 2 - Desequilibrio (Kg)",
+      "required": false
+    },
+    {
+      "name": "x_test_2_speed_50",
+      "field_type": "integer",
+      "label": "Ensayo 2 - 50% Vel (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_2_vibration_50",
+      "field_type": "float",
+      "label": "Ensayo 2 - 50% Vibración (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_test_2_speed_75",
+      "field_type": "integer",
+      "label": "Ensayo 2 - 75% Vel (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_2_vibration_75",
+      "field_type": "float",
+      "label": "Ensayo 2 - 75% Vibración (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_test_2_speed_100",
+      "field_type": "integer",
+      "label": "Ensayo 2 - 100% Vel (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_2_vibration_100",
+      "field_type": "float",
+      "label": "Ensayo 2 - 100% Vibración (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_test_2_comments",
+      "field_type": "text",
+      "label": "Ensayo 2 - Comentarios",
+      "required": false
+    },
+    {
+      "name": "x_test_3_imbalance",
+      "field_type": "float",
+      "label": "Ensayo 3 - Desequilibrio (Kg)",
+      "required": false
+    },
+    {
+      "name": "x_test_3_speed_50",
+      "field_type": "integer",
+      "label": "Ensayo 3 - 50% Vel (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_3_vibration_50",
+      "field_type": "float",
+      "label": "Ensayo 3 - 50% Vibración (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_test_3_speed_75",
+      "field_type": "integer",
+      "label": "Ensayo 3 - 75% Vel (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_3_vibration_75",
+      "field_type": "float",
+      "label": "Ensayo 3 - 75% Vibración (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_test_3_speed_100",
+      "field_type": "integer",
+      "label": "Ensayo 3 - 100% Vel (rpm)",
+      "required": false
+    },
+    {
+      "name": "x_test_3_vibration_100",
+      "field_type": "float",
+      "label": "Ensayo 3 - 100% Vibración (mm/s)",
+      "required": false
+    },
+    {
+      "name": "x_test_3_comments",
+      "field_type": "text",
+      "label": "Ensayo 3 - Comentarios",
+      "required": false
+    },
+    {
+      "name": "x_test_comments",
+      "field_type": "text",
+      "label": "Comentarios generales",
+      "required": false
+    },
+    {
+      "name": "x_result_status",
+      "field_type": "selection",
+      "label": "Resultado",
+      "selection": [
+        ["ok", "OK"],
+        ["ok_with_comments", "OK con comentarios"],
+        ["not_ok", "NOK"]
+      ],
+      "required": true
+    },
+    {
+      "name": "x_performed_by",
+      "field_type": "char",
+      "label": "Realizado por",
+      "required": true
+    },
+    {
+      "name": "x_department",
+      "field_type": "char",
+      "label": "Departamento",
+      "required": false
+    },
+    {
+      "name": "x_test_date",
+      "field_type": "date",
+      "label": "Fecha",
+      "required": true
+    },
+    {
+      "name": "x_signature",
+      "field_type": "char",
+      "label": "Firma",
+      "required": false
+    }
+  ]
+}

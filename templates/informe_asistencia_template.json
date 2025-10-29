@@ -1,0 +1,109 @@
+{
+  "template_name": "Informe de asistencia",
+  "template_code": "informe_asistencia",
+  "base_model": "project.task",
+  "fields": [
+    {
+      "name": "x_client",
+      "field_type": "char",
+      "label": "Cliente",
+      "required": true
+    },
+    {
+      "name": "x_date",
+      "field_type": "date",
+      "label": "Fecha",
+      "required": true
+    },
+    {
+      "name": "x_oa_reference",
+      "field_type": "char",
+      "label": "OA referencia",
+      "required": false
+    },
+    {
+      "name": "x_project_number",
+      "field_type": "char",
+      "label": "Nº de Proyecto",
+      "required": false
+    },
+    {
+      "name": "x_model",
+      "field_type": "char",
+      "label": "Modelo",
+      "required": false
+    },
+    {
+      "name": "x_serial_number",
+      "field_type": "char",
+      "label": "Nº de Serie",
+      "required": false
+    },
+    {
+      "name": "x_report_content_page1",
+      "field_type": "text",
+      "label": "Contenido del Informe - Página 1",
+      "required": false
+    },
+    {
+      "name": "x_report_content_page2",
+      "field_type": "text",
+      "label": "Contenido del Informe - Página 2",
+      "required": false
+    },
+    {
+      "name": "x_report_content_page3",
+      "field_type": "text",
+      "label": "Contenido del Informe - Página 3",
+      "required": false
+    },
+    {
+      "name": "x_performed_by",
+      "field_type": "char",
+      "label": "Realizado por",
+      "required": true
+    },
+    {
+      "name": "x_position_dept_performed",
+      "field_type": "char",
+      "label": "Posición/Depto (Realizado)",
+      "required": false
+    },
+    {
+      "name": "x_date_performed",
+      "field_type": "date",
+      "label": "Fecha (Realizado)",
+      "required": false
+    },
+    {
+      "name": "x_signature_performed",
+      "field_type": "char",
+      "label": "Firma (Realizado)",
+      "required": false
+    },
+    {
+      "name": "x_approved_by",
+      "field_type": "char",
+      "label": "Aprobado por",
+      "required": false
+    },
+    {
+      "name": "x_position_dept_approved",
+      "field_type": "char",
+      "label": "Posición/Depto (Aprobado)",
+      "required": false
+    },
+    {
+      "name": "x_date_approved",
+      "field_type": "date",
+      "label": "Fecha (Aprobado)",
+      "required": false
+    },
+    {
+      "name": "x_signature_approved",
+      "field_type": "char",
+      "label": "Firma (Aprobado)",
+      "required": false
+    }
+  ]
+}
