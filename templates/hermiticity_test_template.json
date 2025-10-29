@@ -1,0 +1,132 @@
+{
+  "template_name": "Test de Hermeticidad",
+  "template_code": "hermiticity_test",
+  "base_model": "project.task",
+  "fields": [
+    {
+      "name": "x_assistance_code",
+      "field_type": "char",
+      "label": "Código asistencia",
+      "required": false
+    },
+    {
+      "name": "x_client",
+      "field_type": "char",
+      "label": "Cliente",
+      "required": true
+    },
+    {
+      "name": "x_model",
+      "field_type": "char",
+      "label": "Modelo",
+      "required": false
+    },
+    {
+      "name": "x_project_name",
+      "field_type": "char",
+      "label": "Proyecto",
+      "required": false
+    },
+    {
+      "name": "x_serial_number",
+      "field_type": "char",
+      "label": "SN",
+      "required": false
+    },
+    {
+      "name": "x_test_objective",
+      "field_type": "text",
+      "label": "Objetivo del Test",
+      "readonly": true
+    },
+    {
+      "name": "x_test_procedure",
+      "field_type": "text",
+      "label": "Procedimiento",
+      "readonly": true
+    },
+    {
+      "name": "x_test_method",
+      "field_type": "text",
+      "label": "Método",
+      "readonly": true
+    },
+    {
+      "name": "x_acceptance_criteria",
+      "field_type": "text",
+      "label": "Criterio de aceptación",
+      "readonly": true
+    },
+    {
+      "name": "x_test_number",
+      "field_type": "integer",
+      "label": "Ensayo nr.",
+      "required": false
+    },
+    {
+      "name": "x_initial_pressure",
+      "field_type": "float",
+      "label": "Presión inicial (mbar)",
+      "required": false
+    },
+    {
+      "name": "x_initial_time",
+      "field_type": "char",
+      "label": "Hora inicial",
+      "required": false
+    },
+    {
+      "name": "x_final_pressure",
+      "field_type": "float",
+      "label": "Presión Final (mbar)",
+      "required": false
+    },
+    {
+      "name": "x_final_time",
+      "field_type": "char",
+      "label": "Hora final",
+      "required": false
+    },
+    {
+      "name": "x_test_comments",
+      "field_type": "text",
+      "label": "Comentarios del ensayo",
+      "required": false
+    },
+    {
+      "name": "x_result_status",
+      "field_type": "selection",
+      "label": "Resultado",
+      "selection": [
+        ["ok", "OK"],
+        ["ok_with_comments", "OK con comentarios"],
+        ["not_ok", "No OK"]
+      ],
+      "required": true
+    },
+    {
+      "name": "x_result_comments",
+      "field_type": "text",
+      "label": "Comentarios del resultado",
+      "required": false
+    },
+    {
+      "name": "x_performed_by",
+      "field_type": "char",
+      "label": "Realizado por",
+      "required": true
+    },
+    {
+      "name": "x_department",
+      "field_type": "char",
+      "label": "Departamento",
+      "required": false
+    },
+    {
+      "name": "x_test_date",
+      "field_type": "date",
+      "label": "Fecha",
+      "required": true
+    }
+  ]
+}

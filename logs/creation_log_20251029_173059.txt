@@ -1,0 +1,13 @@
+Odoo Template Creation Log
+============================================================
+Timestamp: 2025-10-29 17:30:59
+Template: Hermiticity Test
+Base Model: project.task
+
+Results:
+  Total fields:  20
+  Created:       19
+  Skipped:       0
+  Failed:        1
+  Failed fields: x_test_objective
+  Success:       False
