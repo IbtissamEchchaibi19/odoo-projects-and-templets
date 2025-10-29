@@ -3,5 +3,5 @@
   "odoo_db": "genmindsolution",
   "odoo_username": "ibtissam.echchaibi@gmail.com",
   "odoo_password": "Odoo1912@2001",
-  "template_file": "templates/vibraciones_test_template.json"
+  "template_file": "templates/centrifuge_revision_template.json"
 }

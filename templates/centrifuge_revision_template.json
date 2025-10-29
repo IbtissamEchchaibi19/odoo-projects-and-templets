@@ -1,0 +1,1082 @@
+{
+  "template_name": "Revision Centrifuge RINA",
+  "template_code": "centrifuge_revision",
+  "base_model": "project.task",
+  "fields": [
+    {
+      "name": "x_assistance_code",
+      "field_type": "char",
+      "label": "Assistance nº",
+      "required": false
+    },
+    {
+      "name": "x_customer",
+      "field_type": "char",
+      "label": "Customer",
+      "required": true
+    },
+    {
+      "name": "x_model",
+      "field_type": "char",
+      "label": "Model",
+      "required": false
+    },
+    {
+      "name": "x_project",
+      "field_type": "char",
+      "label": "Project",
+      "required": false
+    },
+    {
+      "name": "x_serial_number",
+      "field_type": "char",
+      "label": "SN",
+      "required": false
+    },
+    {
+      "name": "x_performed_by",
+      "field_type": "char",
+      "label": "Performed by",
+      "required": true
+    },
+    {
+      "name": "x_position_dept",
+      "field_type": "char",
+      "label": "Position/Dept",
+      "required": false
+    },
+    {
+      "name": "x_inspection_date",
+      "field_type": "date",
+      "label": "Date",
+      "required": true
+    },
+    {
+      "name": "x_received_by",
+      "field_type": "char",
+      "label": "Received Customer by",
+      "required": false
+    },
+    {
+      "name": "x_received_position",
+      "field_type": "char",
+      "label": "Received Position/Dept",
+      "required": false
+    },
+    {
+      "name": "x_received_date",
+      "field_type": "date",
+      "label": "Received Date",
+      "required": false
+    },
+    {
+      "name": "x_objective",
+      "field_type": "text",
+      "label": "Objective",
+      "readonly": true
+    },
+    {
+      "name": "x_procedure",
+      "field_type": "text",
+      "label": "Procedure",
+      "readonly": true
+    },
+    {
+      "name": "x_standard",
+      "field_type": "text",
+      "label": "Standard",
+      "readonly": true
+    },
+    {
+      "name": "x_prev_no_defects",
+      "field_type": "selection",
+      "label": "No defects that prevent inspection",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_prev_regular_use",
+      "field_type": "selection",
+      "label": "Equipment used regularly",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_prev_minor_defects",
+      "field_type": "selection",
+      "label": "Has other minor defects",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_prev_customer_comments",
+      "field_type": "text",
+      "label": "Customer comments regarding operation",
+      "required": false
+    },
+    {
+      "name": "x_verify_id_plate",
+      "field_type": "selection",
+      "label": "ID equipment plate - Present and legible",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_verify_emergency_stop",
+      "field_type": "selection",
+      "label": "Emergency stop - Operation check",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_verify_hmi",
+      "field_type": "selection",
+      "label": "Operator panel HMI - Controls",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_verify_collector",
+      "field_type": "selection",
+      "label": "Closed collector detector - Operation check",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_verify_rotation",
+      "field_type": "selection",
+      "label": "Rotation test - Operation check",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_verify_vibration",
+      "field_type": "selection",
+      "label": "Vibration test - Operation check",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_verify_comments",
+      "field_type": "text",
+      "label": "Previous Verifications Comments",
+      "required": false
+    },
+    {
+      "name": "x_baseplate_corrosion",
+      "field_type": "selection",
+      "label": "Baseplate - Corrosion",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_baseplate_remains",
+      "field_type": "selection",
+      "label": "Baseplate - Remains of product, oil, others",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_support_structure",
+      "field_type": "selection",
+      "label": "Equipment support structure - Corrosion/Anchorage/Wiring",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_motor_support",
+      "field_type": "selection",
+      "label": "Motor support status",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_connection_boxes",
+      "field_type": "selection",
+      "label": "Connections boxes - Rejiband",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_cover_condition",
+      "field_type": "selection",
+      "label": "Cover - Corrosion/pores/cracks",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_cable_protection",
+      "field_type": "selection",
+      "label": "Cable protection - Earthing",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_vibration_sensor",
+      "field_type": "selection",
+      "label": "Vibration sensor",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_baseplate_comments",
+      "field_type": "text",
+      "label": "Inertial Baseplate Comments",
+      "required": false
+    },
+    {
+      "name": "x_suspension_maintenance",
+      "field_type": "boolean",
+      "label": "Suspension - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_dampers_condition",
+      "field_type": "selection",
+      "label": "Dampers - Corrosion/Rubber/Fixation",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_tripendular_condition",
+      "field_type": "selection",
+      "label": "Tripendular - Corrosion/Protections/Clearances/Fixation",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_visco_dampers",
+      "field_type": "selection",
+      "label": "Visco dampers - Corrosion/Protections/Viscomass level",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_suspension_comments",
+      "field_type": "text",
+      "label": "Suspension System Comments",
+      "required": false
+    },
+    {
+      "name": "x_casing_maintenance",
+      "field_type": "boolean",
+      "label": "Casing - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_temp_probe",
+      "field_type": "selection",
+      "label": "Temperature probe - Wiring/Instrumentation",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_sensor_interlock",
+      "field_type": "selection",
+      "label": "Sensor and interlock device - Wiring/Condition",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_pneumatic_system",
+      "field_type": "selection",
+      "label": "Pneumatic system - Tubing/Corrosion/Covering",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_casing_gasket",
+      "field_type": "selection",
+      "label": "Casing gasket - Weldings/Seating",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_casing_closure",
+      "field_type": "selection",
+      "label": "Casing closure condition (Enerpacks, mechanical closure, etc.)",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_casing_comments",
+      "field_type": "text",
+      "label": "Casing Comments",
+      "required": false
+    },
+    {
+      "name": "x_lid_maintenance",
+      "field_type": "boolean",
+      "label": "Lid - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_sight_glasses",
+      "field_type": "selection",
+      "label": "Sight glasses - Light/Cleaning",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_hinges",
+      "field_type": "selection",
+      "label": "Hinges - Greasing/Adjustment",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_opening_cylinder",
+      "field_type": "selection",
+      "label": "Opening cylinder - Fixations/Connections/Leaks/Corrosion/Function",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_lid_comments",
+      "field_type": "text",
+      "label": "Lid Comments",
+      "required": false
+    },
+    {
+      "name": "x_feeding_detector_maintenance",
+      "field_type": "boolean",
+      "label": "Feeding detector - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_feeding_corrosion",
+      "field_type": "selection",
+      "label": "Feeding detector - Corrosion/Shaft/Alignment",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_feeding_instrumentation",
+      "field_type": "selection",
+      "label": "Pressure gauge/Selenoid valves/Tubing/Detectors/Wiring/Regulation",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_feeding_comments",
+      "field_type": "text",
+      "label": "Feeding Detector Comments",
+      "required": false
+    },
+    {
+      "name": "x_feeding_pipe",
+      "field_type": "selection",
+      "label": "Feeding pipe - Flexible/Corrosion/Gaskets/Orientation",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_washing_pipe",
+      "field_type": "selection",
+      "label": "Washing pipe - Flexible/Corrosion/Gaskets/Orientation/Sprays",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_outlet_liquid",
+      "field_type": "selection",
+      "label": "Outlet liquid - Bellows/Corrosion/Gaskets/Sight glass",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_cip_system",
+      "field_type": "selection",
+      "label": "CIP - Sprays/Connections/Flexible/Aspiration",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_solid_discharge_pipe",
+      "field_type": "selection",
+      "label": "Solid discharge - Bellows",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_piping_comments",
+      "field_type": "text",
+      "label": "Piping and Connections Comments",
+      "required": false
+    },
+    {
+      "name": "x_scrapper_maintenance",
+      "field_type": "boolean",
+      "label": "Scrapper - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_scrapper_hydraulic",
+      "field_type": "selection",
+      "label": "Hydraulic - Gaskets/Detectors",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_hydraulic_circuit",
+      "field_type": "selection",
+      "label": "Hydraulic circuit - Fixations/Corrosion/Leaks/Connections",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_blade_condition",
+      "field_type": "selection",
+      "label": "Blade - Condition/Adjustment",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_blade_blowing",
+      "field_type": "selection",
+      "label": "Blade blowing - Flexible/Detectors",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_scrapper_comments",
+      "field_type": "text",
+      "label": "Scrapper Comments",
+      "required": false
+    },
+    {
+      "name": "x_antagonic_maintenance",
+      "field_type": "boolean",
+      "label": "Antagonic blowing - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_antagonic_clearances",
+      "field_type": "selection",
+      "label": "Clearances/Selenoid valve/Fixation",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_antagonic_comments",
+      "field_type": "text",
+      "label": "Antagonic Blowing Comments",
+      "required": false
+    },
+    {
+      "name": "x_drive_maintenance",
+      "field_type": "boolean",
+      "label": "Drive - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_belt_condition",
+      "field_type": "selection",
+      "label": "Belt - Condition/Tension/Protections",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_main_motor",
+      "field_type": "selection",
+      "label": "Main motor - Rails/Corrosion/Condition/Cables/Earthing/ID plate",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_pulley_condition",
+      "field_type": "selection",
+      "label": "Pulley - Condition/Alignment",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_static_discharge",
+      "field_type": "selection",
+      "label": "Static electricity discharge - Brush/Earthing/Support",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_tachometric",
+      "field_type": "selection",
+      "label": "Tachometric system - Detectors/Support",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_drive_comments",
+      "field_type": "text",
+      "label": "Drive Comments",
+      "required": false
+    },
+    {
+      "name": "x_basket_bottom",
+      "field_type": "selection",
+      "label": "Bottom plate - Corrosion/Pore/Deformations",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_basket_boarding",
+      "field_type": "selection",
+      "label": "Boarding - Corrosion/Pore",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_basket_ferrule",
+      "field_type": "selection",
+      "label": "Ferrule - Corrosion/Pore/Welding",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_basket_comments",
+      "field_type": "text",
+      "label": "Basket Comments",
+      "required": false
+    },
+    {
+      "name": "x_bearing_maintenance",
+      "field_type": "boolean",
+      "label": "Bearing box - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_greasing_system",
+      "field_type": "selection",
+      "label": "Greasing - Leaks/Connections/Type/Plate",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_oil_system",
+      "field_type": "selection",
+      "label": "Oil type - Leaks/Sightglass",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_bearing_temp_probe",
+      "field_type": "selection",
+      "label": "Temperature probe connections",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_inerting",
+      "field_type": "selection",
+      "label": "Inerting connections",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_bearing_comments",
+      "field_type": "text",
+      "label": "Bearing Box Comments",
+      "required": false
+    },
+    {
+      "name": "x_hoses_maintenance",
+      "field_type": "boolean",
+      "label": "Hoses - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_liquid_outlet_hose",
+      "field_type": "selection",
+      "label": "Liquid outlet - Bellows/Corrosion/Gaskets/Sightglass",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_hoses_comments",
+      "field_type": "text",
+      "label": "Hoses Comments",
+      "required": false
+    },
+    {
+      "name": "x_filtercloth_fixing_ring",
+      "field_type": "selection",
+      "label": "Fixing ring system - Slot/Rings/Filtercloth condition",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_filtercloth_clip",
+      "field_type": "selection",
+      "label": "Fixing CLIP system - Slot/Filtercloth condition",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_filtercloth_gasket",
+      "field_type": "selection",
+      "label": "Fixing gasket system - Slot/Gasket/Filtercloth condition",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_filtercloth_comments",
+      "field_type": "text",
+      "label": "Filtercloth Comments",
+      "required": false
+    },
+    {
+      "name": "x_butterfly_valve",
+      "field_type": "selection",
+      "label": "Butterfly valve - Condition/Fixations/Actuators/Detectors",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_screw_conveyor",
+      "field_type": "selection",
+      "label": "Screw conveyor - Condition/Gearmotor/Cables/Earthing",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_solid_discharge_comments",
+      "field_type": "text",
+      "label": "Solid Discharge Comments",
+      "required": false
+    },
+    {
+      "name": "x_inertization_maintenance",
+      "field_type": "boolean",
+      "label": "Inertization - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_blanketing_panel",
+      "field_type": "selection",
+      "label": "Blanketing panel - Condition/Selenoid/Connections/Detectors/Pressure/Rotameter/Tubing",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_oxygen_analyzer",
+      "field_type": "selection",
+      "label": "Oxygen Analyzer - Connections/Condition",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_siphonic_tank",
+      "field_type": "selection",
+      "label": "Hydraulic closing/Siphonic tank - Condition/Sightglass/Leaks/Level/Light",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_inertization_comments",
+      "field_type": "text",
+      "label": "Inertization Comments",
+      "required": false
+    },
+    {
+      "name": "x_hydraulic_unit_maintenance",
+      "field_type": "boolean",
+      "label": "Hydraulic unit - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_hydraulic_actuators",
+      "field_type": "selection",
+      "label": "Actuators/Wiring/Connections/Selenoid valves/Condition/Filters/Instrumentation/Motor/Oil level",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_hydraulic_comments",
+      "field_type": "text",
+      "label": "Hydraulic Unit Comments",
+      "required": false
+    },
+    {
+      "name": "x_lubrication_maintenance",
+      "field_type": "boolean",
+      "label": "Lubrication unit - Preventive Maintenance included",
+      "required": false
+    },
+    {
+      "name": "x_lubrication_actuators",
+      "field_type": "selection",
+      "label": "Actuators/Wiring/Connections/Selenoid valves/Condition/Filters/Instrumentation/Motor/Oil level",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_lubrication_comments",
+      "field_type": "text",
+      "label": "Lubrication Unit Comments",
+      "required": false
+    },
+    {
+      "name": "x_power_cabinet",
+      "field_type": "selection",
+      "label": "Power cabinet - Ventilation/Filters/Connections/Terminals/Wiring",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_control_cabinet",
+      "field_type": "selection",
+      "label": "Control cabinet - Ventilation/Filters/Connections/Terminals/Wiring",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_operator_panel_cabinet",
+      "field_type": "selection",
+      "label": "Operator panel - Connections/Condition",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_brake_resistors",
+      "field_type": "selection",
+      "label": "Brake resistors cabinet - Condition/Wiring",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_electrical_comments",
+      "field_type": "text",
+      "label": "Electrical Cabinets Comments",
+      "required": false
+    },
+    {
+      "name": "x_temperature_test",
+      "field_type": "selection",
+      "label": "Temperature test (attached document)",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_vibrations_test",
+      "field_type": "selection",
+      "label": "Vibrations test (attached document)",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_leak_test",
+      "field_type": "selection",
+      "label": "Leak test (attached document)",
+      "selection": [
+        ["ok", "OK"],
+        ["not_ok", "No OK"],
+        ["na", "N/A"]
+      ],
+      "required": false
+    },
+    {
+      "name": "x_tests_comments",
+      "field_type": "text",
+      "label": "Tests Comments",
+      "required": false
+    },
+    {
+      "name": "x_others_not_mentioned",
+      "field_type": "text",
+      "label": "Others before not mentioned",
+      "required": false
+    },
+    {
+      "name": "x_final_notes",
+      "field_type": "text",
+      "label": "Notes, comments and final conclusions",
+      "required": false
+    },
+    {
+      "name": "x_overall_result",
+      "field_type": "selection",
+      "label": "Overall Inspection Result",
+      "selection": [
+        ["ok", "OK"],
+        ["ok_with_comments", "OK with comments"],
+        ["not_ok", "No OK"]
+      ],
+      "required": true
+    }
+  ]
+}
